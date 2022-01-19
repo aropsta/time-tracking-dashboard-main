@@ -1,0 +1,77 @@
+@use "./variables.scss" as *;
+
+$border-radius: 1rem;
+:root {
+  font-size: 18px;
+}
+.card {
+  width: 10rem;
+  height: 10rem;
+  color: white;
+  position: relative;
+  border-radius: $border-radius;
+}
+
+.no-card {
+  display: none;
+}
+
+.work {
+  background-image: url("../../public/icons/icon-work.svg");
+  background-repeat: no-repeat;
+  background-color: $light-red;
+}
+
+.play {
+  background-image: url("../../public/icons/icon-play.svg");
+  background-repeat: no-repeat;
+  background-color: $soft-blue;
+}
+.exercise {
+  background-image: url("../../public/icons/icon-exercise.svg");
+  background-repeat: no-repeat;
+  background-color: $lime-green;
+}
+.study {
+  background-image: url("../../public/icons/icon-study.svg");
+  background-repeat: no-repeat;
+  background-color: $light-red2;
+}
+.social {
+  background-image: url("../../public/icons/icon-social.svg");
+  background-repeat: no-repeat;
+  background-color: $violet;
+}
+.self-care {
+  background-image: url("../../public/icons/icon-self-care.svg");
+  background-origin: left;
+  background-repeat: no-repeat;
+  background-color: $soft-orange;
+}
+.header-section {
+}
+
+.title {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.time {
+  font-size: 2rem;
+}
+.period {
+  color: $pale-blue;
+}
+.inner-card {
+  padding: 1rem;
+  background-color: $dark-blue;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transform: translateY(20%);
+  border-radius: $border-radius;
+}
+
+.attribution {
+  display: none;
+}
