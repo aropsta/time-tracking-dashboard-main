@@ -17,13 +17,16 @@ function App() {
     <div className="App">
       <AppContextProvider>
         <Profile className="profile-section"></Profile>
-        <Card className="card-one" data={work}></Card>
 
-        <Card className="card-two" data={play}></Card>
-        <Card className="card-three" data={study}></Card>
-        <Card className="card-four" data={exercise}></Card>
-        <Card className="card-five" data={social}></Card>
-        <Card className="card-six" data={selfCare}></Card>
+        <section className="grid">
+          <Card className="card-one" data={work}></Card>
+
+          <Card className="card-two" data={play}></Card>
+          <Card className="card-three" data={study}></Card>
+          <Card className="card-four" data={exercise}></Card>
+          <Card className="card-five" data={social}></Card>
+          <Card className="card-six" data={selfCare}></Card>
+        </section>
       </AppContextProvider>
     </div>
   );

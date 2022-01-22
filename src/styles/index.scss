@@ -1,4 +1,4 @@
-@use "./variables.scss";
+@use "./variables.scss" as *;
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
     "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
@@ -12,6 +12,12 @@ html,
 body,
 #root {
   height: 100%;
+  width: 100%;
+}
+
+#root {
+  background-color: $very-dark-blue;
+  display: flex;
 }
 
 code {

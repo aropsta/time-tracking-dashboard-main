@@ -5,26 +5,29 @@ export const AppContext = createContext();
 class AppContextProvider extends Component {
   state = {
     frame: "daily",
+    buttonActive: "false",
+    buttonClass: "",
   };
 
-  dailyView = () => {
-    this.setState({ frame: "daily" });
-  };
-  weeklyView = (timeframe) => {
-    this.setState({ frame: "weekly" });
+  setPeriod = (interval) => {
+    console.log(interval);
+    this.setState({
+      frame: interval,
+    });
   };
 
-  monthlyView = (timeframe) => {
-    this.setState({ frame: "monthly" });
+  toggleButton = () => {
+    this.setState({ buttonActive: !this.state.buttonActive });
+    if (this.state.buttonActive) {
+      this.setState({ buttonClass: "button-active" });
+    } else this.setState({ buttonClass: "" });
   };
   render() {
     return (
       <AppContext.Provider
         value={{
           ...this.state,
-          dailyView: this.dailyView,
-          weeklyView: this.weeklyView,
-          monthlyView: this.monthlyView,
+          setPeriod: this.setPeriod,
         }}>
         {this.props.children}
       </AppContext.Provider>

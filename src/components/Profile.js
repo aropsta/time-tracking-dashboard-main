@@ -10,17 +10,31 @@ export default class Profile extends Component {
 
     this.state = {
       timeFrame: "daily",
+      buttonActive: false,
+      buttonClass: "",
+      buttonIndexArray: [0, 1, 2],
+      activeButton: 0,
     };
   }
 
-  handButtonClick = (a) => {
-    this.setState(() => {
-      console.log(this.context.timeFrame);
-      this.context.frame = a;
+  //set the activeButton to the one that was clicked
+  activateButton = (index) => {
+    this.setState({
+      activeButton: this.state.buttonIndexArray[index],
     });
   };
+
+  //If active button matches the one that was passed in, return the active class, otherwise return nothing
+  toggleActiveStyles = (index) => {
+    if (this.state.buttonIndexArray[index] === this.state.activeButton) {
+      return "button-active";
+    } else {
+      return "";
+    }
+  };
+
   render() {
-    const { dailyView, weeklyView, monthlyView } = this.context;
+    const { dailyView, weeklyView, monthlyView, setPeriod } = this.context;
     return (
       <section className="profile-section">
         <header className="profile-header">
@@ -29,9 +43,30 @@ export default class Profile extends Component {
           <h1>Jeremy Robson</h1>
         </header>
         <aside className="time-frame-section">
-          <button onClick={dailyView}>Daily</button>
-          <button onClick={weeklyView}>Weekly</button>
-          <button onClick={monthlyView}>Monthly</button>
+          <button
+            className={this.toggleActiveStyles(0)}
+            onClick={() => {
+              this.activateButton(0);
+              setPeriod("daily");
+            }}>
+            Daily
+          </button>
+          <button
+            className={this.toggleActiveStyles(1)}
+            onClick={() => {
+              this.activateButton(1);
+              setPeriod("weekly");
+            }}>
+            Weekly
+          </button>
+          <button
+            className={this.toggleActiveStyles(2)}
+            onClick={() => {
+              this.activateButton(2);
+              setPeriod("monthly");
+            }}>
+            Monthly
+          </button>
         </aside>
       </section>
     );

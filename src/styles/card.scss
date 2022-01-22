@@ -2,27 +2,15 @@
 
 :root {
   font-size: 18px;
-  --url: url("../../public/favicon-32x32.png");
-  --work: url("../../public/icons/icon-work.svg");
-  --play: url("../../public/icons/icon-play.svg");
-  --study: url("../../public/icons/icon-study.svg");
-  --exercise: url("../../public/icons/icon-exercise.svg");
-  --social: url("../../public/icons/icon-social.svg");
-  --self-care: url("../../public/icons/icon-self-care.svg");
-
-  --color: hsl(255, 100%, 100%);
-  --cwork: hsl(15, 100%, 70%);
-  --play-color: hsl(195, 74%, 62%);
-  --study-color: hsl(348, 100%, 68%);
-  --exercise-color: hsl(145, 58%, 55%);
-  --social-color: hsl(264, 64%, 52%);
-  --self-care-color: hsl(43, 84%, 65%);
 }
 .card {
   color: white;
   position: relative;
   border-radius: $border-radius;
   z-index: 1;
+  text-align: left;
+  max-width: 14rem;
+  max-height: 10rem;
 }
 
 .inner-card::before {
@@ -34,13 +22,20 @@
   background: no-repeat right;
   background-image: var(--url);
   background-color: var(--color);
-  transform: translate(-50%, -75%);
+  transform: translate(50%, -120%);
+  left: -50%;
   z-index: -1;
   border-radius: $border-radius $border-radius 0 0;
 }
 
 .no-card {
   display: none;
+}
+
+svg:hover {
+  path {
+    fill: white;
+  }
 }
 
 .work {
@@ -70,18 +65,25 @@
   --color: hsl(43, 84%, 65%);
 }
 .header-section {
+  display: flex;
+  justify-content: space-between;
 }
 
 .title {
-  font-size: 1.2rem;
-  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+
+  font-weight: 500;
 }
 
 .time {
-  font-size: 2rem;
+  font-size: 2.5rem;
+  margin-bottom: 0.6rem;
+  font-weight: 300;
 }
 .period {
   color: $pale-blue;
+  font-size: 0.8rem;
 }
 .inner-card:hover {
   background-color: $desaturated-blue;
@@ -92,6 +94,7 @@
   height: 100%;
   width: 100%;
   border-radius: $border-radius;
+  padding: 1.5rem;
 }
 
 .attribution {

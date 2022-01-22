@@ -44,11 +44,11 @@ export default class Card extends Component {
   getPeriod = () => {
     switch (this.context.frame) {
       case "daily":
-        return "Day";
+        return "Yesterday";
       case "weekly":
-        return "Week";
+        return "Last Week";
       case "monthly":
-        return "Month";
+        return "Last Month";
       default:
         return 0;
     }
@@ -96,18 +96,27 @@ export default class Card extends Component {
   render() {
     return (
       <section aria-labelledby="head" className={`card ${this.getClassFromTitle()}`} name="card">
+        <div className="div"></div>
         <article className="inner-card" name="innerCard">
           <header className="header-section" name="headerSection">
             <h2 className="title" id="head" name="title">
               {this.state.title}
             </h2>
-            <menu></menu>
+
+            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+              <path
+                className="menu"
+                d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                fill="#BBC0FF"
+                fill-rule="evenodd"
+              />
+            </svg>
           </header>
           <p className="time" name="time">
             {`${this.getCurrentHours()}hrs`}
           </p>
           <p name="period" className="period">
-            Last {this.getPeriod()}
+            {this.getPeriod()}
             <span className="period" name="periodTime">
               {` - ${this.getPreviousHours()}hrs`}
             </span>
