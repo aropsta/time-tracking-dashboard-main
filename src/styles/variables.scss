@@ -1,4 +1,6 @@
 @use "./normalize.scss";
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+
 // Primary Colours
 
 $blue: hsl(246, 80%, 60%);
@@ -17,3 +19,5 @@ $desaturated-blue: hsl(235, 45%, 61%);
 $pale-blue: hsl(236, 100%, 87%);
 
 // Typography
+
+$border-radius: 0.75rem;

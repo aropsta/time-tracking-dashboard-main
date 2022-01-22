@@ -1,9 +1,63 @@
+@use "./variables.scss" as *;
+
 .avatar {
-  width: 50%;
-  height: 50%;
+  width: 64px;
+  height: auto;
+  border-radius: 50%;
+  border: 2px solid white;
 }
 
 .profile-section {
-  width: 20rem;
-  height: 20rem;
+  grid-column: 1/2;
+  grid-row: 1/3;
+  align-items: flex-start;
+  text-align: left;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-header {
+  display: flex;
+  padding: 2rem;
+  flex-direction: column;
+  width: 100%;
+  border-radius: $border-radius;
+
+  background-color: $blue;
+  flex-grow: 1;
+  flex-basis: 80%;
+}
+header:first-of-type p {
+  color: $pale-blue;
+  font-weight: 300;
+  font-size: 0.75rem;
+}
+
+h1 {
+  width: 10ch;
+  color: white;
+  font-weight: 300;
+}
+
+.time-frame-section {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  flex-grow: 1;
+  width: 100%;
+  justify-content: space-around;
+  align-items: flex-start;
+  background: $dark-blue;
+}
+
+button {
+  color: $pale-blue;
+  background: none;
+  border: none;
+}
+
+button:hover {
+  color: white;
+  cursor: pointer;
 }

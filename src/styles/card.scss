@@ -1,15 +1,42 @@
 @use "./variables.scss" as *;
 
-$border-radius: 1rem;
 :root {
   font-size: 18px;
+  --url: url("../../public/favicon-32x32.png");
+  --work: url("../../public/icons/icon-work.svg");
+  --play: url("../../public/icons/icon-play.svg");
+  --study: url("../../public/icons/icon-study.svg");
+  --exercise: url("../../public/icons/icon-exercise.svg");
+  --social: url("../../public/icons/icon-social.svg");
+  --self-care: url("../../public/icons/icon-self-care.svg");
+
+  --color: hsl(255, 100%, 100%);
+  --cwork: hsl(15, 100%, 70%);
+  --play-color: hsl(195, 74%, 62%);
+  --study-color: hsl(348, 100%, 68%);
+  --exercise-color: hsl(145, 58%, 55%);
+  --social-color: hsl(264, 64%, 52%);
+  --self-care-color: hsl(43, 84%, 65%);
 }
 .card {
-  width: 10rem;
-  height: 10rem;
   color: white;
   position: relative;
   border-radius: $border-radius;
+  z-index: 1;
+}
+
+.inner-card::before {
+  position: absolute;
+  background-size: cover;
+  height: 25%;
+  width: 100%;
+  content: "";
+  background: no-repeat right;
+  background-image: var(--url);
+  background-color: var(--color);
+  transform: translate(-50%, -75%);
+  z-index: -1;
+  border-radius: $border-radius $border-radius 0 0;
 }
 
 .no-card {
@@ -17,36 +44,30 @@ $border-radius: 1rem;
 }
 
 .work {
-  background-image: url("../../public/icons/icon-work.svg");
-  background-repeat: no-repeat;
-  background-color: $light-red;
+  --url: url("../../public/icons/icon-work.svg");
+  --color: hsl(15, 100%, 70%);
 }
 
 .play {
-  background-image: url("../../public/icons/icon-play.svg");
-  background-repeat: no-repeat;
-  background-color: $soft-blue;
+  --url: url("../../public/icons/icon-play.svg");
+  --color: hsl(195, 74%, 62%);
 }
 .exercise {
-  background-image: url("../../public/icons/icon-exercise.svg");
-  background-repeat: no-repeat;
-  background-color: $lime-green;
+  --url: url("../../public/icons/icon-exercise.svg");
+  --color: hsl(145, 58%, 55%);
 }
 .study {
-  background-image: url("../../public/icons/icon-study.svg");
-  background-repeat: no-repeat;
-  background-color: $light-red2;
+  --color: hsl(348, 100%, 68%);
+  --url: url("../../public/icons/icon-study.svg");
 }
 .social {
-  background-image: url("../../public/icons/icon-social.svg");
-  background-repeat: no-repeat;
-  background-color: $violet;
+  --color: hsl(264, 64%, 52%);
+  --url: url("../../public/icons/icon-social.svg");
 }
 .self-care {
-  background-image: url("../../public/icons/icon-self-care.svg");
-  background-origin: left;
-  background-repeat: no-repeat;
-  background-color: $soft-orange;
+  --url: url("../../public/icons/icon-self-care.svg");
+
+  --color: hsl(43, 84%, 65%);
 }
 .header-section {
 }
@@ -62,13 +83,14 @@ $border-radius: 1rem;
 .period {
   color: $pale-blue;
 }
+.inner-card:hover {
+  background-color: $desaturated-blue;
+}
 .inner-card {
-  padding: 1rem;
   background-color: $dark-blue;
+  position: relative;
   height: 100%;
   width: 100%;
-  position: absolute;
-  transform: translateY(20%);
   border-radius: $border-radius;
 }
 
