@@ -13,9 +13,6 @@ function App() {
   let social = inputData[4];
   let selfCare = inputData[5];
 
-  .asd{
-    
-  }
   return (
     <div className="App">
       <AppContextProvider>
