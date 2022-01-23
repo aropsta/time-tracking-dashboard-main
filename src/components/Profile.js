@@ -38,7 +38,7 @@ export default class Profile extends Component {
     return (
       <section className="profile-section">
         <header className="profile-header">
-          <img align="left" src="/image-jeremy.png" alt="" className="avatar" />
+          <img align="left" src="./image-jeremy.png" alt="" className="avatar" />
           <p>Report for</p>
           <h1>Jeremy Robson</h1>
         </header>
