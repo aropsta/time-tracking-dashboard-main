@@ -8,9 +8,10 @@
   position: relative;
   border-radius: $border-radius;
   z-index: 1;
+
   text-align: left;
-  max-width: 14rem;
-  max-height: 10rem;
+  min-width: 11rem;
+  max-height: 9rem;
 }
 
 .inner-card::before {
@@ -19,6 +20,7 @@
   height: 25%;
   width: 100%;
   content: "";
+  display: none;
   background: no-repeat right;
   background-image: var(--url);
   background-color: var(--color);
@@ -33,6 +35,7 @@
 }
 
 svg:hover {
+  cursor: pointer;
   path {
     fill: white;
   }
