@@ -34,11 +34,11 @@ export default class Profile extends Component {
   };
 
   render() {
-    const { dailyView, weeklyView, monthlyView, setPeriod } = this.context;
+    const { setPeriod } = this.context;
     return (
       <section className="profile-section">
         <header className="profile-header">
-          <img align="left" src="./image-jeremy.png" alt="" className="avatar" />
+          <img align="left" src="/image-jeremy.png" alt="" className="avatar" />
           <p>Report for</p>
           <h1>Jeremy Robson</h1>
         </header>

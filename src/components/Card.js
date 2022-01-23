@@ -67,8 +67,6 @@ export default class Card extends Component {
     }
   };
   getClassFromTitle = () => {
-    let rootElement = document.documentElement;
-
     switch (this.state.title) {
       case "Work":
         return "work";
