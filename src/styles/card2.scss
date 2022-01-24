@@ -1,0 +1,91 @@
+@use "./variables.scss" as *;
+
+:root {
+  font-size: 18px;
+}
+.card {
+  color: white;
+  position: relative;
+  border-radius: $border-radius;
+  z-index: 1;
+
+  text-align: left;
+}
+.inner-card::before {
+  position: absolute;
+  background-size: cover;
+  height: 25%;
+  width: 100%;
+  content: "";
+  background: no-repeat right;
+  background-image: var(--url);
+  background-color: var(--color);
+  transform: translate(50%, -120%);
+  left: -50%;
+  z-index: -1;
+  border-radius: $border-radius $border-radius 0 0;
+}
+svg:hover {
+  cursor: pointer;
+  path {
+    fill: white;
+  }
+}
+.work {
+  --url: url("../../public/icons/icon-work.svg");
+  --color: hsl(15, 100%, 70%);
+}
+
+.play {
+  --url: url("../../public/icons/icon-play.svg");
+  --color: hsl(195, 74%, 62%);
+}
+.exercise {
+  --url: url("../../public/icons/icon-exercise.svg");
+  --color: hsl(145, 58%, 55%);
+}
+.study {
+  --color: hsl(348, 100%, 68%);
+  --url: url("../../public/icons/icon-study.svg");
+}
+.social {
+  --color: hsl(264, 64%, 52%);
+  --url: url("../../public/icons/icon-social.svg");
+}
+.self-care {
+  --url: url("../../public/icons/icon-self-care.svg");
+
+  --color: hsl(43, 84%, 65%);
+}
+.header-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+
+  font-weight: 500;
+}
+
+.time {
+  font-size: 2.5rem;
+  margin-bottom: 0.6rem;
+  font-weight: 300;
+}
+.period {
+  color: $pale-blue;
+  font-size: 0.8rem;
+}
+.inner-card:hover {
+  background-color: $desaturated-blue;
+}
+.inner-card {
+  background-color: $dark-blue;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  border-radius: $border-radius;
+  padding: 1.5rem;
+}

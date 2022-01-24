@@ -1,6 +1,6 @@
 import { Component } from "react";
 import { AppContext } from "../AppContext";
-import "../styles/card.scss";
+import "../styles/card2.scss";
 
 export default class Card extends Component {
   static contextType = AppContext;

@@ -1,6 +1,6 @@
 import Card from "./components/Card";
 import Profile from "./components/Profile";
-import "./styles/App.scss";
+import "./styles/App2.scss";
 
 import inputData from "./data.json";
 import AppContextProvider from "./AppContext";
@@ -16,17 +16,16 @@ function App() {
   return (
     <div className="App">
       <AppContextProvider>
-        <Profile className="profile-section"></Profile>
+        <main className="container">
+          <Profile></Profile>
 
-        <section className="grid">
-          <Card className="card-one" data={work}></Card>
-
-          <Card className="card-two" data={play}></Card>
-          <Card className="card-three" data={study}></Card>
-          <Card className="card-four" data={exercise}></Card>
-          <Card className="card-five" data={social}></Card>
-          <Card className="card-six" data={selfCare}></Card>
-        </section>
+          <Card data={work}></Card>
+          <Card data={play}></Card>
+          <Card data={study}></Card>
+          <Card data={exercise}></Card>
+          <Card data={social}></Card>
+          <Card data={selfCare}></Card>
+        </main>
       </AppContextProvider>
     </div>
   );

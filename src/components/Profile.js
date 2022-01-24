@@ -36,7 +36,7 @@ export default class Profile extends Component {
   render() {
     const { setPeriod } = this.context;
     return (
-      <section className="profile-section">
+      <main className="profile-container">
         <header className="profile-header">
           <img align="left" src="/image-jeremy.png" alt="" className="avatar" />
           <p>Report for</p>
@@ -68,7 +68,7 @@ export default class Profile extends Component {
             Monthly
           </button>
         </aside>
-      </section>
+      </main>
     );
   }
 }
