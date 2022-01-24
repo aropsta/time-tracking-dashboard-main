@@ -1,0 +1,38 @@
+@use "./variables.scss" as *;
+
+.App {
+  text-align: center;
+  display: flex;
+  margin: auto;
+}
+
+.card-one {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.card-three {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+.card-three {
+  grid-column: 3/4;
+  grid-row: 1/2;
+}
+.card-three {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+.card-three {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+.card-three {
+  grid-column: 3/4;
+  grid-row: 2/3;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}

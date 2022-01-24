@@ -1,6 +1,6 @@
 import Card from "./components/Card";
 import Profile from "./components/Profile";
-import "./styles/App2.scss";
+import "./styles/App.scss";
 
 import inputData from "./data.json";
 import AppContextProvider from "./AppContext";
@@ -14,20 +14,19 @@ function App() {
   let selfCare = inputData[5];
 
   return (
-    <div className="App">
-      <AppContextProvider>
-        <main className="container">
-          <Profile></Profile>
-
+    <AppContextProvider>
+      <div className="App">
+        <Profile></Profile>
+        <section className="card-grid">
           <Card data={work}></Card>
           <Card data={play}></Card>
           <Card data={study}></Card>
           <Card data={exercise}></Card>
           <Card data={social}></Card>
           <Card data={selfCare}></Card>
-        </main>
-      </AppContextProvider>
-    </div>
+        </section>
+      </div>
+    </AppContextProvider>
   );
 }
 

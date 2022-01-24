@@ -1,6 +1,6 @@
 import { Component } from "react";
 import { AppContext } from "../AppContext";
-import "../styles/card2.scss";
+import "../styles/card.scss";
 
 export default class Card extends Component {
   static contextType = AppContext;
@@ -94,21 +94,24 @@ export default class Card extends Component {
   render() {
     return (
       <section aria-labelledby="head" className={`card ${this.getClassFromTitle()}`} name="card">
-        <div className="div"></div>
+        <i className={`div ${this.getClassFromTitle()}`}></i>
         <article className="inner-card" name="innerCard">
           <header className="header-section" name="headerSection">
             <h2 className="title" id="head" name="title">
               {this.state.title}
             </h2>
 
-            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
-              <path
-                className="menu"
-                d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
-                fill="#BBC0FF"
-                fill-rule="evenodd"
-              />
-            </svg>
+            <menu className="menu">
+              <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+                {" "}
+                <path
+                  className="menu"
+                  d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                  fill="#BBC0FF"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </menu>
           </header>
           <p className="time" name="time">
             {`${this.getCurrentHours()}hrs`}

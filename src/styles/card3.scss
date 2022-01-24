@@ -10,13 +10,17 @@
   z-index: 1;
 
   text-align: left;
+  min-width: 11rem;
+  max-height: 9rem;
 }
+
 .inner-card::before {
   position: absolute;
   background-size: cover;
   height: 25%;
   width: 100%;
   content: "";
+  display: none;
   background: no-repeat right;
   background-image: var(--url);
   background-color: var(--color);
@@ -25,12 +29,18 @@
   z-index: -1;
   border-radius: $border-radius $border-radius 0 0;
 }
+
+.no-card {
+  display: none;
+}
+
 svg:hover {
   cursor: pointer;
   path {
     fill: white;
   }
 }
+
 .work {
   --url: url("../../public/icons/icon-work.svg");
   --color: hsl(15, 100%, 70%);
@@ -88,4 +98,8 @@ svg:hover {
   width: 100%;
   border-radius: $border-radius;
   padding: 1.5rem;
+}
+
+.attribution {
+  display: none;
 }

@@ -1,81 +1,30 @@
 @use "./variables.scss" as *;
 
 .App {
-  text-align: center;
   display: flex;
   margin: auto;
+  @media (max-width: 500px) {
+    flex-direction: column;
+  }
 }
 
-.app-content {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-}
-
-.grid {
+.card-grid {
   display: grid;
-  flex-wrap: wrap;
-  grid-gap: 1rem;
+  grid-gap: 2rem;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  grid-gap: 1rem;
-}
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  flex: 1 1 100%;
 }
 
-.card-one {
-  grid-column: 1/2;
-  grid-row: 1/2;
-}
-.card-three {
-  grid-column: 2/3;
-  grid-row: 1/2;
-}
-.card-three {
-  grid-column: 3/4;
-  grid-row: 1/2;
-}
-.card-three {
-  grid-column: 1/2;
-  grid-row: 2/3;
-}
-.card-three {
-  grid-column: 2/3;
-  grid-row: 2/3;
-}
-.card-three {
-  grid-column: 3/4;
-  grid-row: 2/3;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.profile-container {
+  background-color: $dark-blue;
+  border-radius: $border-radius;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 25%;
+  margin-right: 1.5rem;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.attribution {
+  display: none;
 }
