@@ -6,7 +6,8 @@
   min-width: min(80%, 64rem);
   @media (max-width: 60rem) {
     flex-direction: column;
-    min-width: 90%;
+    #root {
+    }
     .profile-container {
       width: 100%;
       margin-bottom: 1.5rem;
