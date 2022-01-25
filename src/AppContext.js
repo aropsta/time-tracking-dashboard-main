@@ -10,7 +10,6 @@ class AppContextProvider extends Component {
   };
 
   setPeriod = (interval) => {
-    console.log(interval);
     this.setState({
       frame: interval,
     });

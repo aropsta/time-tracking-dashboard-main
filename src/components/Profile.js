@@ -39,8 +39,10 @@ export default class Profile extends Component {
       <main className="profile-container">
         <header className="profile-header">
           <img align="left" src="/image-jeremy.png" alt="" className="avatar" />
-          <p>Report for</p>
-          <h1>Jeremy Robson</h1>
+          <div className="text">
+            <p>Report for</p>
+            <h1>Jeremy Robson</h1>
+          </div>
         </header>
         <aside className="time-frame-section">
           <button

@@ -1,6 +1,6 @@
 @use "./variables.scss" as *;
 
-$height: 2.5rem;
+$height: 3rem;
 $margin: -0.75rem;
 
 :root {
@@ -24,10 +24,10 @@ $margin: -0.75rem;
   background-color: $dark-blue;
   height: calc(100% - ($height + $margin));
 
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  min-width: 12rem;
   border-radius: $border-radius;
 
   padding: 1.5rem;
@@ -37,6 +37,7 @@ $margin: -0.75rem;
 .div {
   content: "";
   height: $height;
+
   margin-bottom: $margin;
   width: 100%;
   background-repeat: no-repeat;
@@ -72,7 +73,6 @@ menu:hover {
 .period {
   color: $pale-blue;
   font-size: 0.8rem;
-  margin-top: -0.5rem;
 }
 .inner-card:hover {
   background-color: $desaturated-blue;

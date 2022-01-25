@@ -4,6 +4,7 @@ import "../styles/card.scss";
 
 export default class Card extends Component {
   static contextType = AppContext;
+  hourString = "hrs";
   constructor(props) {
     super(props);
 
@@ -30,12 +31,34 @@ export default class Card extends Component {
 
   getCurrentHours = () => {
     switch (this.context.frame) {
-      case "daily":
-        return this.state.currentHours[0];
-      case "weekly":
-        return this.state.currentHours[1];
-      case "monthly":
-        return this.state.currentHours[2];
+      case "daily": {
+        let value = this.state.currentHours[0];
+        if (value === 1) {
+          this.hourString = "hr";
+        } else {
+          this.hourString = "hrs";
+        }
+        return value;
+      }
+
+      case "weekly": {
+        let value = this.state.currentHours[1];
+        if (value === 1) {
+          this.hourString = "hr";
+        } else {
+          this.hourString = "hrs";
+        }
+        return value;
+      }
+      case "monthly": {
+        let value = this.state.currentHours[2];
+        if (value === 1) {
+          this.hourString = "hr";
+        } else {
+          this.hourString = "hrs";
+        }
+        return value;
+      }
       default:
         return 0;
     }
@@ -56,12 +79,33 @@ export default class Card extends Component {
 
   getPreviousHours = () => {
     switch (this.context.frame) {
-      case "daily":
-        return this.state.previousHours[0];
-      case "weekly":
-        return this.state.previousHours[1];
-      case "monthly":
-        return this.state.previousHours[2];
+      case "daily": {
+        let value = this.state.previousHours[0];
+        if (value === 1) {
+          this.hourString = "hr";
+        } else {
+          this.hourString = "hrs";
+        }
+        return value;
+      }
+      case "weekly": {
+        let value = this.state.previousHours[1];
+        if (value === 1) {
+          this.hourString = "hr";
+        } else {
+          this.hourString = "hrs";
+        }
+        return value;
+      }
+      case "monthly": {
+        let value = this.state.previousHours[2];
+        if (value === 1) {
+          this.hourString = "hr";
+        } else {
+          this.hourString = "hrs";
+        }
+        return value;
+      }
       default:
         return 0;
     }
@@ -93,9 +137,9 @@ export default class Card extends Component {
 
   render() {
     return (
-      <section aria-labelledby="head" className={`card ${this.getClassFromTitle()}`} name="card">
+      <article aria-labelledby="head" className={`card ${this.getClassFromTitle()}`} name="card">
         <i className={`div ${this.getClassFromTitle()}`}></i>
-        <article className="inner-card" name="innerCard">
+        <section className="inner-card" name="innerCard">
           <header className="header-section" name="headerSection">
             <h2 className="title" id="head" name="title">
               {this.state.title}
@@ -114,16 +158,16 @@ export default class Card extends Component {
             </menu>
           </header>
           <p className="time" name="time">
-            {`${this.getCurrentHours()}hrs`}
+            {`${this.getCurrentHours()}${this.hourString}`}
           </p>
           <p name="period" className="period">
             {this.getPeriod()}
             <span className="period" name="periodTime">
-              {` - ${this.getPreviousHours()}hrs`}
+              {` - ${this.getPreviousHours()}${this.hourString}`}
             </span>
           </p>
-        </article>
-      </section>
+        </section>
+      </article>
     );
   }
 }
