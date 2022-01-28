@@ -18,12 +18,9 @@ function App() {
       <div className="App">
         <Profile></Profile>
         <section className="card-grid">
-          <Card data={work}></Card>
-          <Card data={play}></Card>
-          <Card data={study}></Card>
-          <Card data={exercise}></Card>
-          <Card data={social}></Card>
-          <Card data={selfCare}></Card>
+          {inputData.map((item, index) => (
+            <Card key={index} data={item}></Card>
+          ))}
         </section>
       </div>
     </AppContextProvider>

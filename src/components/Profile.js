@@ -38,11 +38,11 @@ export default class Profile extends Component {
     return (
       <main className="profile-container">
         <header className="profile-header">
-          <img align="left" src="/image-jeremy.png" alt="" className="avatar" />
-          <div className="text">
+          <img src="/image-jeremy.png" alt="" className="avatar" />
+          <section role="" className="text">
             <p>Report for</p>
             <h1>Jeremy Robson</h1>
-          </div>
+          </section>
         </header>
         <aside className="time-frame-section">
           <button

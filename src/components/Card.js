@@ -137,11 +137,11 @@ export default class Card extends Component {
 
   render() {
     return (
-      <article aria-labelledby="head" className={`card ${this.getClassFromTitle()}`} name="card">
+      <article aria-labelledby="head" className={`card ${this.getClassFromTitle()}`}>
         <i className={`div ${this.getClassFromTitle()}`}></i>
-        <section className="inner-card" name="innerCard">
-          <header className="header-section" name="headerSection">
-            <h2 className="title" id="head" name="title">
+        <section className="inner-card">
+          <header className="header-section">
+            <h2 className="title" id="head">
               {this.state.title}
             </h2>
 
@@ -157,14 +157,10 @@ export default class Card extends Component {
               </svg>
             </menu>
           </header>
-          <p className="time" name="time">
-            {`${this.getCurrentHours()}${this.hourString}`}
-          </p>
-          <p name="period" className="period">
+          <p className="time">{`${this.getCurrentHours()}${this.hourString}`}</p>
+          <p className="period">
             {this.getPeriod()}
-            <span className="period" name="periodTime">
-              {` - ${this.getPreviousHours()}${this.hourString}`}
-            </span>
+            <span className="period">{` - ${this.getPreviousHours()}${this.hourString}`}</span>
           </p>
         </section>
       </article>
