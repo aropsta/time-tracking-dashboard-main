@@ -39,13 +39,17 @@ h1 {
 .time-frame-section {
   display: flex;
   flex-direction: column;
-  flex: 1 1 10%;
-  grid-gap: 1rem;
+  width: 100%;
   justify-content: flex-end;
-  align-items: flex-start;
-  padding: 0 1.5rem;
   margin-bottom: 2rem;
   font-size: 0.85rem;
+  li {
+    width: 100%;
+    list-style: none;
+  }
+  button {
+    padding: 0.5rem 1.5rem;
+  }
 }
 
 button {

@@ -141,21 +141,16 @@ export default class Card extends Component {
         <i className={`div ${this.getClassFromTitle()}`}></i>
         <section className="inner-card">
           <header className="header-section">
-            <h2 className="title" id="head">
-              {this.state.title}
-            </h2>
+            <h2 className="title">{this.state.title}</h2>
 
-            <menu className="menu">
+            <button className="menu" aria-label="open menu">
               <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
-                {" "}
                 <path
-                  className="menu"
                   d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
                   fill="#BBC0FF"
-                  fill-rule="evenodd"
-                />
+                  fill-rule="evenodd"></path>
               </svg>
-            </menu>
+            </button>
           </header>
           <p className="time">{`${this.getCurrentHours()}${this.hourString}`}</p>
           <p className="period">

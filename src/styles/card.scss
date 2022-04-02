@@ -18,7 +18,14 @@ $margin: -0.75rem;
 
 .menu {
   display: flex;
+  flex-direction: column;
+  &:hover {
+    svg path {
+      fill: white;
+    }
+  }
 }
+
 .inner-card {
   background-color: $dark-blue;
   height: calc(100% - ($height + $margin));

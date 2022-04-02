@@ -39,37 +39,43 @@ export default class Profile extends Component {
       <main className="profile-container">
         <header className="profile-header">
           <img src="/image-jeremy.png" alt="" className="avatar" />
-          <section role="" className="text">
+          <section className="text">
             <p>Report for</p>
             <h1>Jeremy Robson</h1>
           </section>
         </header>
-        <aside className="time-frame-section">
-          <button
-            className={this.toggleActiveStyles(0)}
-            onClick={() => {
-              this.activateButton(0);
-              setPeriod("daily");
-            }}>
-            Daily
-          </button>
-          <button
-            className={this.toggleActiveStyles(1)}
-            onClick={() => {
-              this.activateButton(1);
-              setPeriod("weekly");
-            }}>
-            Weekly
-          </button>
-          <button
-            className={this.toggleActiveStyles(2)}
-            onClick={() => {
-              this.activateButton(2);
-              setPeriod("monthly");
-            }}>
-            Monthly
-          </button>
-        </aside>
+        <ul className="time-frame-section">
+          <li>
+            <button
+              className={this.toggleActiveStyles(0)}
+              onClick={() => {
+                this.activateButton(0);
+                setPeriod("daily");
+              }}>
+              Daily
+            </button>
+          </li>
+          <li>
+            <button
+              className={this.toggleActiveStyles(1)}
+              onClick={() => {
+                this.activateButton(1);
+                setPeriod("weekly");
+              }}>
+              Weekly
+            </button>
+          </li>
+          <li>
+            <button
+              className={this.toggleActiveStyles(2)}
+              onClick={() => {
+                this.activateButton(2);
+                setPeriod("monthly");
+              }}>
+              Monthly
+            </button>
+          </li>
+        </ul>
       </main>
     );
   }
